@@ -34,7 +34,7 @@ class PlaylistRepositoryReal(PlaylistRepository):
         query = delete(t).where(t.c.id == playlist_id)
         self._db.execute(query)
 
-    def get_playlist(self, playlist_id: PlaylistId) -> PlaylistData | None:
+    def find_playlist(self, playlist_id: PlaylistId) -> PlaylistData | None:
         t = self._table
         query = select(t).where(t.c.id == playlist_id)
         result = self._db.execute(query)

@@ -24,14 +24,14 @@ class PlaylistService:
         return EmptyResponse()
 
     def delete_playlist(self, auth_data: AuthData, playlist_id: PlaylistId) -> EmptyResponse:
-        playlist = self._playlist_repository.get_playlist(playlist_id)
+        playlist = self._playlist_repository.find_playlist(playlist_id)
         if playlist is None or not auth_data.has_permission_to_organisation(playlist.organisation_id):
             return EmptyResponse()
         self._playlist_repository.delete_playlist(playlist_id)
         return EmptyResponse()
 
     def get_playlist(self, auth_data: AuthData, playlist_id: PlaylistId) -> ApplicationError | PlaylistData:
-        playlist = self._playlist_repository.get_playlist(playlist_id)
+        playlist = self._playlist_repository.find_playlist(playlist_id)
         if playlist is None or not auth_data.has_permission_to_organisation(playlist.organisation_id):
             return ApplicationError(2000, "Playlist not found")
         return playlist

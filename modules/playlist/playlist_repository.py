@@ -26,7 +26,7 @@ class PlaylistRepository:
         pass
 
     @abstractmethod
-    def get_playlist(self, playlist_id: PlaylistId) -> PlaylistData | None:
+    def find_playlist(self, playlist_id: PlaylistId) -> PlaylistData | None:
         pass
 
     @abstractmethod
