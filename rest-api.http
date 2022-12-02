@@ -1,0 +1,33 @@
+POST http://localhost:5000/playlist
+Accept: application/json
+Content-Type: application/json
+X-OrganisationId: org_id_123
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6W10sIm9yZ19pbmZvIjp7Im9yZ19pZCI6WyJvcmdfaWRfMTIzIl19fQ.aMRAPWTlfpwgeKlQNPC8wloZ0kUJne_81FP3Bp2vDas
+
+{"name": "New playlist 1"}
+
+
+###
+
+GET http://localhost:5000/playlist
+Accept: application/json
+Content-Type: application/json
+X-OrganisationId: org_id_123
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6W10sIm9yZ19pbmZvIjp7Im9yZ19pZCI6WyJvcmdfaWRfMTIzIl19fQ.aMRAPWTlfpwgeKlQNPC8wloZ0kUJne_81FP3Bp2vDas
+
+
+###
+
+DELETE http://localhost:5000/playlist/d9a7d6f4-671d-4e95-91a8-34b56088fb3e
+Accept: application/json
+Content-Type: application/json
+X-OrganisationId: org_id_123
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6W10sIm9yZ19pbmZvIjp7Im9yZ19pZCI6WyJvcmdfaWRfMTIzIl19fQ.aMRAPWTlfpwgeKlQNPC8wloZ0kUJne_81FP3Bp2vDas
+
+###
+
+GET http://localhost:5000/playlist/d9a7d6f4-671d-4e95-91a8-34b56088fb3e
+Accept: application/json
+Content-Type: application/json
+X-OrganisationId: org_id_123
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6W10sIm9yZ19pbmZvIjp7Im9yZ19pZCI6WyJvcmdfaWRfMTIzIl19fQ.aMRAPWTlfpwgeKlQNPC8wloZ0kUJne_81FP3Bp2vDas

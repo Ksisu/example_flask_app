@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from modules.auth.auth_service import AuthData
 from modules.common.empty_response import EmptyResponse
 from modules.common.error import ApplicationError
-from modules.playlist.playlist_repository import PlaylistRepository, PlaylistData, PlaylistId
+from modules.playlist.playlist_repository_inmemory import PlaylistRepository, PlaylistData, PlaylistId
 
 from dataclasses_jsonschema import JsonSchemaMixin
 
@@ -37,5 +37,5 @@ class PlaylistService:
         return playlist
 
     def list_organisation_playlists(self, auth_data: AuthData) -> list[PlaylistData]:
-        playlists = self._playlist_repository.find_playlist_biy_organisation(auth_data.current_organisation_id)
+        playlists = self._playlist_repository.find_playlist_by_organisation(auth_data.current_organisation_id)
         return playlists
