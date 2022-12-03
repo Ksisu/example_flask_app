@@ -1,6 +1,6 @@
 from flask import Blueprint, request
 from modules.auth.auth_service import AuthService, AuthData
-from modules.common.protected_endpoint_decorator import protected_endpoint
+from modules.auth.protected_endpoint_decorator import protected_endpoint
 
 from modules.playlist.playlist_repository_inmemory import PlaylistId
 from modules.playlist.playlist_service import PlaylistService, CreatePlaylistData

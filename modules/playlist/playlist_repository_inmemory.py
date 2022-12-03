@@ -8,7 +8,10 @@ from modules.playlist.playlist_repository import PlaylistData, PlaylistRepositor
 
 # Dummy repository for testing
 class PlaylistRepositoryInMemory(PlaylistRepository):
-    _playlists: list[PlaylistData] = list()
+    def __init__(self, initdata=None):
+        if initdata is None:
+            initdata = list()
+        self._playlists = initdata
 
     def add_playlist(self, data: PlaylistData) -> None:
         id = str(uuid.uuid4())

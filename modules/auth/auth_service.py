@@ -33,7 +33,7 @@ class AuthService:
 
     def authenticate(self, request: flask.Request) -> AuthError | AuthData:
         organisation_id = self._get_organisation_id(request)
-        if organisation_id is AuthError:
+        if isinstance(organisation_id, AuthError):
             return organisation_id
 
         jwt = self._get_jwt(request)
@@ -68,7 +68,7 @@ class AuthService:
         return AuthData(roles, organisation_ids)
 
     def _get_organisation_id(self, request: flask.Request) -> AuthError | OrganisationId:
-        org_id = request.headers['X-OrganisationId']
+        org_id = request.headers.get('X-OrganisationId')
         if org_id is not None:
             return org_id
-        return AuthError(1003, "Missing organisation id from path")
+        return AuthError(1003, "Missing X-OrganisationId header")
