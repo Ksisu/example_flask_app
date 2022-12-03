@@ -1,8 +1,9 @@
-from typing import TypeAlias
-import flask
 from dataclasses import dataclass, replace
-from modules.auth.jwt_service import JwtService
+from typing import TypeAlias
 
+import flask
+
+from modules.auth.jwt_service import JwtService
 from modules.common.error import ApplicationError
 
 OrganisationId: TypeAlias = str
@@ -13,6 +14,7 @@ class AuthData:
     roles: list[str]
     organisation_ids: list[OrganisationId]
     current_organisation_id: str = None
+
     # TODO add user info
 
     def is_admin(self):

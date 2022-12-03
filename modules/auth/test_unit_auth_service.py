@@ -58,4 +58,3 @@ def test_unit_auth_service_authenticate_failed_missing_organisation():
     result = SERVICE.authenticate(request)
     assert isinstance(result, AuthError)
     assert result == AuthError(1003, "Missing X-OrganisationId header")
-

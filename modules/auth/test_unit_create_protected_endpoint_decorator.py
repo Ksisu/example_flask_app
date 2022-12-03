@@ -1,4 +1,5 @@
 from unittest.mock import MagicMock
+
 from flask import Blueprint, Flask
 
 from modules.auth.auth_service import AuthService
@@ -16,7 +17,7 @@ protected_decorator_test = create_protected_endpoint_decorator(dummy_handler)
 def test_create_protected_endpoint_decorator_call_endpoint_and_create_json_response():
     auth_service_mock = AuthService(None)
     bp = Blueprint("testbp", __name__)
-    mock_endpoint = MagicMock(return_value=( {"random": "response"}, 456))
+    mock_endpoint = MagicMock(return_value=({"random": "response"}, 456))
     protected_decorator_test(auth_service_mock, bp, "/test/<parameter>/<other_param>", methods=["GET"])(mock_endpoint)
 
     app = Flask(__name__)

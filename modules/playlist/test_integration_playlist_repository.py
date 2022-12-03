@@ -1,7 +1,7 @@
+import random
 from dataclasses import replace
 
 import pytest
-import random
 
 from modules.database.database_service import DatabaseService, DatabaseServiceConfig
 from modules.playlist.playlist_repository import PlaylistData, PlaylistRepository

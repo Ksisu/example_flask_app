@@ -1,6 +1,7 @@
-import jwt
 import os
 from dataclasses import dataclass
+
+import jwt
 
 
 @dataclass

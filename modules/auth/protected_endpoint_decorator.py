@@ -1,7 +1,8 @@
+import random
+
 import dataclasses_jsonschema
 import flask
 from flask import request, jsonify, make_response, Blueprint
-import random
 
 from modules.auth.auth_service import AuthService, AuthError
 from modules.common.error import ApplicationError
@@ -13,10 +14,13 @@ def create_protected_endpoint_decorator(endpoint_handler):
             def wrapper(*args_, **kwargs_):
                 body, status_code = endpoint_handler(auth_service, request, function, *args_, **kwargs_)
                 return make_response(jsonify(body), status_code)
+
             endpoint = path + "_" + str(random.randint(0, 10000))
             bp.add_url_rule(path, endpoint, wrapper, *args, **kwargs)
             return wrapper
+
         return decorator
+
     return _protected_endpoint
 
 

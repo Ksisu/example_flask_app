@@ -1,8 +1,7 @@
-from dataclasses import replace
 import uuid
+from dataclasses import replace
 
 from modules.auth.auth_service import OrganisationId
-
 from modules.playlist.playlist_repository import PlaylistData, PlaylistRepository, PlaylistId
 
 

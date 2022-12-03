@@ -1,11 +1,11 @@
 from dataclasses import dataclass
 
+from dataclasses_jsonschema import JsonSchemaMixin
+
 from modules.auth.auth_service import AuthData
 from modules.common.empty_response import EmptyResponse
 from modules.common.error import ApplicationError
 from modules.playlist.playlist_repository_inmemory import PlaylistRepository, PlaylistData, PlaylistId
-
-from dataclasses_jsonschema import JsonSchemaMixin
 
 
 @dataclass
