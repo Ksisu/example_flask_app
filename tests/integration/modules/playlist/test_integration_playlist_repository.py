@@ -3,10 +3,10 @@ from dataclasses import replace
 
 import pytest
 
-from modules.database.database_service import DatabaseService, DatabaseServiceConfig
-from modules.playlist.playlist_repository import PlaylistData, PlaylistRepository
-from modules.playlist.playlist_repository_inmemory import PlaylistRepositoryInMemory
-from modules.playlist.playlist_repository_real import PlaylistRepositoryReal
+from src.modules.database.database_service import DatabaseService, DatabaseServiceConfig
+from src.modules.playlist.playlist_repository import PlaylistData, PlaylistRepository
+from src.modules.playlist.playlist_repository_inmemory import PlaylistRepositoryInMemory
+from src.modules.playlist.playlist_repository_real import PlaylistRepositoryReal
 
 playlist_repository_inmemory = PlaylistRepositoryInMemory()
 

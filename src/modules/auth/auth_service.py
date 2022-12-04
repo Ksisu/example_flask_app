@@ -3,8 +3,8 @@ from typing import TypeAlias
 
 import flask
 
-from modules.auth.jwt_service import JwtService
-from modules.common.error import ApplicationError
+from src.modules.auth.jwt_service import JwtService
+from src.modules.common.error import ApplicationError
 
 OrganisationId: TypeAlias = str
 

@@ -2,8 +2,8 @@ from unittest.mock import MagicMock
 
 import flask
 
-from modules.auth.auth_service import AuthData, AuthError, AuthService
-from modules.auth.jwt_service import JwtServiceConfig, JwtService
+from src.modules.auth.auth_service import AuthData, AuthError, AuthService
+from src.modules.auth.jwt_service import JwtServiceConfig, JwtService
 
 ROLES = list(["random_role"])
 ORGANISATION_IDS = list(["org_1", "org2"])

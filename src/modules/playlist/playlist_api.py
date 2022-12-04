@@ -1,9 +1,9 @@
 from flask import Blueprint, request
 
-from modules.auth.auth_service import AuthService, AuthData
-from modules.auth.protected_endpoint_decorator import protected_endpoint
-from modules.playlist.playlist_repository_inmemory import PlaylistId
-from modules.playlist.playlist_service import PlaylistService, CreatePlaylistData
+from src.modules.auth.auth_service import AuthService, AuthData
+from src.modules.auth.protected_endpoint_decorator import protected_endpoint
+from src.modules.playlist.playlist_repository_inmemory import PlaylistId
+from src.modules.playlist.playlist_service import PlaylistService, CreatePlaylistData
 
 
 def create_playlist_blueprint(auth_service: AuthService, playlist_service: PlaylistService) -> Blueprint:

@@ -1,8 +1,8 @@
 import uuid
 from dataclasses import replace
 
-from modules.auth.auth_service import OrganisationId
-from modules.playlist.playlist_repository import PlaylistData, PlaylistRepository, PlaylistId
+from src.modules.auth.auth_service import OrganisationId
+from src.modules.playlist.playlist_repository import PlaylistData, PlaylistRepository, PlaylistId
 
 
 # Dummy repository for testing

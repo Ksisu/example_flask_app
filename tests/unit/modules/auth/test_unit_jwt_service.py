@@ -1,7 +1,7 @@
 import pytest
 
-from modules.auth.jwt_service import JwtServiceConfig, JwtService
-from modules.test_util.get_test_names import get_test_names
+from src.modules.auth.jwt_service import JwtServiceConfig, JwtService
+from tests.test_util.get_test_names import get_test_names
 
 test_params = [
     {

@@ -3,9 +3,9 @@ from dataclasses import replace
 
 from sqlalchemy import Table, Column, String, MetaData, select, delete
 
-from modules.auth.auth_service import OrganisationId
-from modules.database.database_service import DatabaseService
-from modules.playlist.playlist_repository import PlaylistData, PlaylistRepository, PlaylistId
+from src.modules.auth.auth_service import OrganisationId
+from src.modules.database.database_service import DatabaseService
+from src.modules.playlist.playlist_repository import PlaylistData, PlaylistRepository, PlaylistId
 
 
 class PlaylistRepositoryReal(PlaylistRepository):

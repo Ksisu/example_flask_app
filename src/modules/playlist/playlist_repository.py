@@ -2,7 +2,7 @@ from abc import abstractmethod
 from dataclasses import dataclass
 from typing import TypeAlias
 
-from modules.auth.auth_service import OrganisationId
+from src.modules.auth.auth_service import OrganisationId
 
 PlaylistId: TypeAlias = str
 

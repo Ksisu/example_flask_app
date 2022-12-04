@@ -4,8 +4,8 @@ import dataclasses_jsonschema
 import flask
 from flask import request, jsonify, make_response, Blueprint
 
-from modules.auth.auth_service import AuthService, AuthError
-from modules.common.error import ApplicationError
+from src.modules.auth.auth_service import AuthService, AuthError
+from src.modules.common.error import ApplicationError
 
 
 def create_protected_endpoint_decorator(endpoint_handler):

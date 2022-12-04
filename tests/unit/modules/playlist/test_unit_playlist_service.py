@@ -1,10 +1,10 @@
 from unittest.mock import MagicMock
 
-from modules.auth.auth_service import AuthData
-from modules.common.empty_response import EmptyResponse
-from modules.common.error import ApplicationError
-from modules.playlist.playlist_repository import PlaylistData, PlaylistRepository
-from modules.playlist.playlist_service import PlaylistService, CreatePlaylistData
+from src.modules.auth.auth_service import AuthData
+from src.modules.common.empty_response import EmptyResponse
+from src.modules.common.error import ApplicationError
+from src.modules.playlist.playlist_repository import PlaylistData, PlaylistRepository
+from src.modules.playlist.playlist_service import PlaylistService, CreatePlaylistData
 
 ORGANISATION_ID_1 = "repository_test_org_777"
 PLAYLIST_1 = PlaylistData(id="playlist_1", organisation_id=ORGANISATION_ID_1, name="Playlist name 1",

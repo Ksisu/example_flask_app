@@ -1,7 +1,7 @@
 import pytest
 
-from modules.auth.auth_service import AuthData
-from modules.test_util.get_test_names import get_test_names
+from src.modules.auth.auth_service import AuthData
+from tests.test_util.get_test_names import get_test_names
 
 ORGANISATION_ID_1 = "repository_test_org_777"
 ORGANISATION_ID_2 = "repository_test_org_888"

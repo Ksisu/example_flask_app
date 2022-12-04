@@ -1,13 +1,13 @@
 import pytest
 from flask import Flask
 
-from modules.auth.auth_service import AuthService
-from modules.auth.jwt_service import JwtServiceConfig, JwtService
-from modules.playlist.playlist_api import create_playlist_blueprint
-from modules.playlist.playlist_repository import PlaylistData
-from modules.playlist.playlist_repository_inmemory import PlaylistRepositoryInMemory
-from modules.playlist.playlist_service import PlaylistService
-from modules.test_util.get_test_names import get_test_names
+from src.modules.auth.auth_service import AuthService
+from src.modules.auth.jwt_service import JwtServiceConfig, JwtService
+from src.modules.playlist.playlist_api import create_playlist_blueprint
+from src.modules.playlist.playlist_repository import PlaylistData
+from src.modules.playlist.playlist_repository_inmemory import PlaylistRepositoryInMemory
+from src.modules.playlist.playlist_service import PlaylistService
+from tests.test_util.get_test_names import get_test_names
 
 GOOD_JWT = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6W10sIm9yZ19pbmZvIjp7Im9yZ19pZCI6WyJvcmdfaWRfMTIzIl19fQ.aMRAPWTlfpwgeKlQNPC8wloZ0kUJne_81FP3Bp2vDas"
 ORG_ID = "org_id_123"

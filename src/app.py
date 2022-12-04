@@ -4,7 +4,6 @@ from modules.auth.auth_service import AuthService
 from modules.auth.jwt_service import JwtServiceConfig, JwtService
 from modules.database.database_service import DatabaseServiceConfig, DatabaseService
 from modules.playlist.playlist_api import create_playlist_blueprint
-from modules.playlist.playlist_repository_inmemory import PlaylistRepository
 from modules.playlist.playlist_repository_real import PlaylistRepositoryReal
 from modules.playlist.playlist_service import PlaylistService
 

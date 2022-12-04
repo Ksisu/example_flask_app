@@ -2,8 +2,8 @@ from unittest.mock import MagicMock
 
 from flask import Blueprint, Flask
 
-from modules.auth.auth_service import AuthService
-from modules.auth.protected_endpoint_decorator import create_protected_endpoint_decorator
+from src.modules.auth.auth_service import AuthService
+from src.modules.auth.protected_endpoint_decorator import create_protected_endpoint_decorator
 
 
 def dummy_handler(_auth_service, _request, function, *args, **kwargs):

@@ -1,6 +1,6 @@
 import pytest
 
-from modules.database.database_service import DatabaseServiceConfig, DatabaseService
+from src.modules.database.database_service import DatabaseServiceConfig, DatabaseService
 
 
 def test_integration_database_service_success():

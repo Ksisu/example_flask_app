@@ -3,9 +3,9 @@ from unittest.mock import MagicMock
 import dataclasses_jsonschema
 import flask
 
-from modules.auth.auth_service import AuthService, AuthData, AuthError
-from modules.auth.protected_endpoint_decorator import protected_endpoint_handler
-from modules.common.error import ApplicationError
+from src.modules.auth.auth_service import AuthService, AuthData, AuthError
+from src.modules.auth.protected_endpoint_decorator import protected_endpoint_handler
+from src.modules.common.error import ApplicationError
 
 SUCCESS_AUTH_DATA_MOCK = AuthData(list(["role1"]), list(["current_org"]), "current_org")
 REQUEST = flask.Request.from_values()
